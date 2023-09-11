@@ -1,0 +1,165 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden; 
+}
+
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#background-video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.page1-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.circle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.breath-animation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    font-size: 12px;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: #f1f4f6;
+    border-radius: 100%;
+    animation-duration: 1s; 
+    animation-fill-mode: both;
+    background-color: transparent;
+    border: 1px solid #f1f4f6;
+    opacity: 0; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white; 
+}
+.circle {
+    color: white;
+}
+.circle1 {
+    animation-name: circle1Anim;
+    animation-delay: 0s; 
+}
+
+.circle2 {
+    animation-name: circle2Anim;
+    animation-delay: 1s; 
+}
+
+.circle3 {
+    animation-name: circle3Anim;
+    animation-delay: 2s; 
+}
+
+@keyframes circle1Anim {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+}
+
+@keyframes circle2Anim {
+    0% {
+        transform: scale(1);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+}
+
+@keyframes circle3Anim {
+    0% {
+        transform: scale(1);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+}
+
+@keyframes exhaleAnim {
+    0% {
+        transform: scale(1.5);
+        opacity: 2;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+@keyframes blinkAnim {
+    0%, 100% {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .circle {
+        width: 80px;
+        height: 80px;
+        font-size: 12px;
+    }
+    .text {
+        font-size: 12px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .circle {
+        width: 60px;
+        height: 60px;
+        font-size: 10px;
+    }
+    .text {
+        font-size: 10px;
+    }
+    .breath-animation {
+        padding: 10px;
+    }
+}

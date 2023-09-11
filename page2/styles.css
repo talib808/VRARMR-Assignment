@@ -1,0 +1,240 @@
+body {
+  font-family: Arial, sans-serif;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.page2-container {
+    background-image: url("../UI assets/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 110vh;
+}
+
+
+.half-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    max-width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    margin-top: 40vh; 
+    height: auto; 
+}
+
+.close-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+p {
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+
+.image-container {
+    text-align: center;
+    margin-top: 20px; 
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto; 
+}
+
+/* Style for carousel container */
+.image-container {
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+}
+
+/* Style for the carousel */
+.carousel {
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Style for carousel images */
+.carousel img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Style for carousel controls (left and right arrows) */
+.carousel-controls {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+
+.prev,
+.next {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+.prev.disabled,
+.next.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+    width: 200px;
+    margin: 0 10px;
+}
+
+.arrows {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.arrow {
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.left-arrow {
+    order: 1;
+}
+
+.right-arrow {
+    order: 2;
+}
+
+
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 20px;
+    max-width: 600px; 
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    animation: scrollRight 6s linear infinite;
+    width: 100%; 
+    justify-content: space-between; 
+}
+
+.carousel img {
+    width: 200px;
+    margin: 0 10px;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+.arrows {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.arrow {
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.left-arrow {
+    order: 1;
+}
+
+.right-arrow {
+    order: 2;
+}
+
+
+@keyframes scrollRight {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    20% {
+        transform: translateX(0);
+    }
+    30% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(-100%);
+    }
+    60% {
+        transform: translateX(-200%);
+    }
+    80% {
+        transform: translateX(-200%);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
